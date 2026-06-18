@@ -1,6 +1,3 @@
-'use client'
-
-import { useRef, useEffect } from 'react'
 import { Compass, GraduationCap, Zap } from 'lucide-react'
 
 const divisions = [
@@ -34,36 +31,16 @@ const divisions = [
 ]
 
 export default function DivisionsSection() {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.querySelectorAll('.animate-item').forEach((child, i) => {
-            setTimeout(() => child.classList.add('visible'), i * 150)
-          })
-          observer.unobserve(el)
-        }
-      },
-      { threshold: 0.1 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <section id="divisions" ref={ref} className="py-16 md:py-24 lg:py-32 bg-white">
+    <section id="divisions" className="py-16 md:py-24 lg:py-32 bg-white">
       <div className="section-container">
-        <p className="animate-item opacity-0 font-sans text-ucademy-accent text-sm font-semibold tracking-widest uppercase mb-3">
+        <p className="font-sans text-ucademy-accent text-sm font-semibold tracking-[0.2em] uppercase mb-3">
           Ucademy ha evolucionado
         </p>
-        <h2 className="animate-item opacity-0 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ucademy-dark mb-4 leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ucademy-dark mb-4 leading-tight">
           Tres caminos, un mismo método salvaje
         </h2>
-        <p className="animate-item opacity-0 font-sans text-ucademy-text-secondary text-lg md:text-xl mb-12 max-w-2xl">
+        <p className="font-sans text-ucademy-text-secondary text-lg md:text-xl mb-12 max-w-2xl">
           Porque opositores, futuros universitarios y alumnos de FP no necesitan lo mismo. Cada terreno pide su propio mapa.
         </p>
 
@@ -73,12 +50,12 @@ export default function DivisionsSection() {
             return (
               <article
                 key={div.id}
-                className="animate-item opacity-0 group bg-white border border-ucademy-border rounded-lg p-6 md:p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                className="group bg-white border border-ucademy-border rounded-lg p-6 md:p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
               >
                 <div className={`w-12 h-12 rounded-lg ${div.color} flex items-center justify-center mb-5`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <span className="text-xs font-semibold tracking-widest uppercase text-ucademy-text-secondary">
+                <span className="text-xs font-semibold tracking-[0.2em] uppercase text-ucademy-text-secondary">
                   {div.label}
                 </span>
                 <h3 className="font-display text-xl md:text-2xl font-bold text-ucademy-dark mt-2 mb-3">

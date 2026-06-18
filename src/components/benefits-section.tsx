@@ -1,6 +1,3 @@
-'use client'
-
-import { useRef, useEffect } from 'react'
 import { Route, MessageCircle, ScrollText, Crosshair, Timer, Heart } from 'lucide-react'
 
 const benefits = [
@@ -13,36 +10,16 @@ const benefits = [
 ]
 
 export default function BenefitsSection() {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.querySelectorAll('.animate-item').forEach((child, i) => {
-            setTimeout(() => child.classList.add('visible'), i * 100)
-          })
-          observer.unobserve(el)
-        }
-      },
-      { threshold: 0.1 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-ucademy-bg-soft">
+    <section className="py-16 md:py-24 lg:py-32 bg-ucademy-bg-soft">
       <div className="section-container">
-        <p className="animate-item opacity-0 font-sans text-ucademy-accent text-sm font-semibold tracking-widest uppercase mb-3 text-center">
+        <p className="font-sans text-ucademy-accent text-sm font-semibold tracking-[0.2em] uppercase mb-3 text-center">
           ¿Por qué estudiar con Ucademy?
         </p>
-        <h2 className="animate-item opacity-0 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center text-ucademy-dark mb-4 leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center text-ucademy-dark mb-4 leading-tight">
           Esto no es otra academia online
         </h2>
-        <p className="animate-item opacity-0 font-sans text-ucademy-text-secondary text-lg text-center mb-12 max-w-2xl mx-auto">
+        <p className="font-sans text-ucademy-text-secondary text-lg text-center mb-12 max-w-2xl mx-auto">
           Llevamos años bajando al barro con miles de alumnos. Esto no son promesas. Son las coordenadas que ya funcionan.
         </p>
 
@@ -50,7 +27,7 @@ export default function BenefitsSection() {
           {benefits.map((b, i) => {
             const Icon = b.icon
             return (
-              <div key={i} className="animate-item opacity-0 bg-white border border-ucademy-border rounded-lg p-6 md:p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+              <div key={i} className="bg-white border border-ucademy-border rounded-lg p-6 md:p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                 <Icon className="w-8 h-8 text-ucademy-accent mb-4" strokeWidth={1.5} />
                 <h3 className="font-display text-lg md:text-xl font-bold text-ucademy-dark mb-2">{b.title}</h3>
                 <p className="text-ucademy-text-secondary text-sm md:text-base leading-relaxed">{b.desc}</p>
