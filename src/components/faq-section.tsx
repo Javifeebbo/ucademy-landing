@@ -58,7 +58,7 @@ export default function FAQSection() {
         <h2 className="animate-item opacity-0 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center text-ucademy-dark mb-4 leading-tight">
           Preguntas frecuentes
         </h2>
-        <p className="animate-item opacity-0 font-body text-ucademy-text-secondary text-lg text-center mb-12 max-w-xl mx-auto">
+        <p className="animate-item opacity-0 font-sans text-ucademy-text-secondary text-lg text-center mb-12 max-w-xl mx-auto">
           Todo lo que necesitas saber antes de dar el paso.
         </p>
 

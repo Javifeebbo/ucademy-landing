@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="section-container relative z-10 w-full py-32 md:py-40">
         <div className="max-w-4xl">
           {/* Pretitle */}
-          <p className="animate-trigger opacity-0 font-body text-ucademy-accent text-sm md:text-base font-semibold tracking-widest uppercase mb-4">
+          <p className="animate-trigger opacity-0 font-sans text-ucademy-accent text-sm md:text-base font-semibold tracking-widest uppercase mb-4">
             Educación salvaje para la vida real
           </p>
 
@@ -53,7 +53,7 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="animate-trigger opacity-0 font-body text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-8">
+          <p className="animate-trigger opacity-0 font-sans text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-8">
             Oposiciones, universidad o FP. Una ruta clara, un método que funciona. Sin humo, sin laberintos y sin perder un día más.
           </p>
 

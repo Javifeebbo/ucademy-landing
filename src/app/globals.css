@@ -1,11 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Besley:wght@400;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* perfektta font will use Besley as fallback (loaded via Google Fonts above) */
-/* Font weights: 400 (regular), 500 (medium), 600 (semibold), 700 (bold) via Tailwind */
 
 :root {
   --color-dark: #1A1A1A;
@@ -25,9 +20,6 @@ html {
 }
 
 body {
-  font-family: 'Poppins', system-ui, sans-serif;
-  color: var(--color-dark);
-  background-color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -52,7 +44,6 @@ body {
   gap: 0.5rem;
   background-color: var(--color-accent);
   color: var(--color-dark);
-  font-family: 'Besley', Georgia, serif;
   font-weight: 700;
   border-radius: 999px;
   padding: 0.75rem 1.5rem;
@@ -80,7 +71,6 @@ body {
   gap: 0.5rem;
   background-color: transparent;
   color: var(--color-dark);
-  font-family: 'Besley', Georgia, serif;
   font-weight: 700;
   border-radius: 999px;
   padding: 0.75rem 1.5rem;
@@ -103,7 +93,7 @@ body {
   border: 1px solid var(--color-border);
   border-radius: 0.5rem;
   font-size: 1rem;
-  font-family: 'Poppins', system-ui, sans-serif;
+  font-family: inherit;
   transition: all 0.2s ease;
   outline: none;
 }

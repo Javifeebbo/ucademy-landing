@@ -35,7 +35,7 @@ export default function ProblemSection() {
         <h2 className="animate-item opacity-0 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ucademy-dark mb-6 leading-tight">
           El sistema educativo lleva décadas pidiéndote que encajes en su molde
         </h2>
-        <p className="animate-item opacity-0 font-body text-ucademy-text-secondary text-lg md:text-xl leading-relaxed mb-10">
+        <p className="animate-item opacity-0 font-sans text-ucademy-text-secondary text-lg md:text-xl leading-relaxed mb-10">
           Academias que prometen resultados y entregan métodos genéricos. Procesos largos, burocracia infinita, temarios que no se actualizan. Y mientras, tú pierdes meses —o años— en un camino que no está hecho para tu vida real.
         </p>
         <ul className="space-y-4">

@@ -36,13 +36,13 @@ export default function BenefitsSection() {
   return (
     <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-ucademy-bg-soft">
       <div className="section-container">
-        <p className="animate-item opacity-0 font-body text-ucademy-accent text-sm font-semibold tracking-widest uppercase mb-3 text-center">
+        <p className="animate-item opacity-0 font-sans text-ucademy-accent text-sm font-semibold tracking-widest uppercase mb-3 text-center">
           ¿Por qué estudiar con Ucademy?
         </p>
         <h2 className="animate-item opacity-0 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center text-ucademy-dark mb-4 leading-tight">
           Esto no es otra academia online
         </h2>
-        <p className="animate-item opacity-0 font-body text-ucademy-text-secondary text-lg text-center mb-12 max-w-2xl mx-auto">
+        <p className="animate-item opacity-0 font-sans text-ucademy-text-secondary text-lg text-center mb-12 max-w-2xl mx-auto">
           Llevamos años bajando al barro con miles de alumnos. Esto no son promesas. Son las coordenadas que ya funcionan.
         </p>
 

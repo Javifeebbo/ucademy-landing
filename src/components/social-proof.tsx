@@ -25,7 +25,7 @@ export default function SocialProof() {
   return (
     <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-ucademy-dark text-white">
       <div className="section-container text-center">
-        <p className="animate-item opacity-0 font-body text-ucademy-accent text-sm font-semibold tracking-widest uppercase mb-3">
+        <p className="animate-item opacity-0 font-sans text-ucademy-accent text-sm font-semibold tracking-widest uppercase mb-3">
           Lo dicen ellos, no nosotros
         </p>
         <h2 className="animate-item opacity-0 font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12 leading-tight">

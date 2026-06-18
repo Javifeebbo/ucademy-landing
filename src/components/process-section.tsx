@@ -35,7 +35,7 @@ export default function ProcessSection() {
         <h2 className="animate-item opacity-0 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center text-ucademy-dark mb-4 leading-tight">
           Empezar es más fácil de lo que crees
         </h2>
-        <p className="animate-item opacity-0 font-body text-ucademy-text-secondary text-lg text-center mb-16 max-w-xl mx-auto">
+        <p className="animate-item opacity-0 font-sans text-ucademy-text-secondary text-lg text-center mb-16 max-w-xl mx-auto">
           Tres pasos. Sin papeleo. Sin rodeos.
         </p>
 

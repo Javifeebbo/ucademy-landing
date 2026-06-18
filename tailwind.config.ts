@@ -8,6 +8,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        display: ["var(--font-besley)", "Georgia", "serif"],
+        button: ["var(--font-besley)", "Georgia", "serif"],
+      },
       colors: {
         ucademy: {
           dark: "#1A1A1A",
@@ -18,11 +23,6 @@ export default {
           "text-secondary": "#6B6B6B",
           "text-muted": "#9CA3AF",
         },
-      },
-      fontFamily: {
-        display: ["Besley", "Georgia", "serif"],
-        body: ["Poppins", "system-ui", "sans-serif"],
-        button: ["Besley", "Georgia", "serif"],
       },
       borderRadius: {
         button: "999px",

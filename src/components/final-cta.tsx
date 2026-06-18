@@ -7,7 +7,7 @@ export default function FinalCTA() {
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
           Tu plaza no espera. Nosotros tampoco.
         </h2>
-        <p className="font-body text-gray-300 text-lg md:text-xl mb-8 max-w-xl mx-auto">
+        <p className="font-sans text-gray-300 text-lg md:text-xl mb-8 max-w-xl mx-auto">
           Cada día que pasa es un día más cerca de la convocatoria. Empieza hoy.
         </p>
         <button

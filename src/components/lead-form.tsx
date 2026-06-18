@@ -12,13 +12,13 @@ export default function LeadForm() {
   return (
     <section id="form" className="py-16 md:py-24 lg:py-32 bg-ucademy-bg-soft">
       <div className="section-container max-w-2xl">
-        <p className="font-body text-ucademy-accent text-sm font-semibold tracking-widest uppercase mb-3 text-center">
+        <p className="font-sans text-ucademy-accent text-sm font-semibold tracking-widest uppercase mb-3 text-center">
           Da el primer paso
         </p>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center text-ucademy-dark mb-4 leading-tight">
           Empieza tu ruta hoy
         </h2>
-        <p className="font-body text-ucademy-text-secondary text-lg text-center mb-10 max-w-lg mx-auto">
+        <p className="font-sans text-ucademy-text-secondary text-lg text-center mb-10 max-w-lg mx-auto">
           Cuéntanos qué buscas y te trazamos el camino. Sin compromiso.
         </p>
 

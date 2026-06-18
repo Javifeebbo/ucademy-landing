@@ -57,13 +57,13 @@ export default function DivisionsSection() {
   return (
     <section id="divisions" ref={ref} className="py-16 md:py-24 lg:py-32 bg-white">
       <div className="section-container">
-        <p className="animate-item opacity-0 font-body text-ucademy-accent text-sm font-semibold tracking-widest uppercase mb-3">
+        <p className="animate-item opacity-0 font-sans text-ucademy-accent text-sm font-semibold tracking-widest uppercase mb-3">
           Ucademy ha evolucionado
         </p>
         <h2 className="animate-item opacity-0 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ucademy-dark mb-4 leading-tight">
           Tres caminos, un mismo método salvaje
         </h2>
-        <p className="animate-item opacity-0 font-body text-ucademy-text-secondary text-lg md:text-xl mb-12 max-w-2xl">
+        <p className="animate-item opacity-0 font-sans text-ucademy-text-secondary text-lg md:text-xl mb-12 max-w-2xl">
           Porque opositores, futuros universitarios y alumnos de FP no necesitan lo mismo. Cada terreno pide su propio mapa.
         </p>
 
