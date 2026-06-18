@@ -1,16 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
 
-:root {
-  --color-dark: #1A1A1A;
-  --color-accent: #FFE45E;
-  --color-accent-hover: #FFD700;
-  --color-bg-soft: #F9F9F7;
-  --color-border: #E8E8E6;
-  --color-text-secondary: #6B6B6B;
+@theme {
+  --color-ucademy-dark: #1A1A1A;
+  --color-ucademy-accent: #FFE45E;
+  --color-ucademy-accent-hover: #FFD700;
+  --color-ucademy-bg-soft: #F9F9F7;
+  --color-ucademy-border: #E8E8E6;
+  --color-ucademy-text-secondary: #6B6B6B;
+  --color-ucademy-text-muted: #9CA3AF;
+  --font-family-display: var(--font-besley), Georgia, serif;
+  --font-family-button: var(--font-besley), Georgia, serif;
+  --radius-button: 999px;
 }
 
+/* Custom component styles */
 * {
   box-sizing: border-box;
 }
@@ -42,8 +46,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: var(--color-accent);
-  color: var(--color-dark);
+  background-color: var(--color-ucademy-accent);
+  color: var(--color-ucademy-dark);
   font-weight: 700;
   border-radius: 999px;
   padding: 0.75rem 1.5rem;
@@ -54,7 +58,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-accent-hover);
+  background-color: var(--color-ucademy-accent-hover);
   transform: scale(1.02);
 }
 
@@ -70,18 +74,18 @@ body {
   justify-content: center;
   gap: 0.5rem;
   background-color: transparent;
-  color: var(--color-dark);
+  color: var(--color-ucademy-dark);
   font-weight: 700;
   border-radius: 999px;
   padding: 0.75rem 1.5rem;
-  border: 2px solid var(--color-dark);
+  border: 2px solid var(--color-ucademy-dark);
   transition: all 0.3s ease;
   cursor: pointer;
   text-decoration: none;
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-dark);
+  background-color: var(--color-ucademy-dark);
   color: white;
 }
 
@@ -90,7 +94,7 @@ body {
   width: 100%;
   padding: 0.75rem 1rem;
   background-color: white;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-ucademy-border);
   border-radius: 0.5rem;
   font-size: 1rem;
   font-family: inherit;
@@ -99,15 +103,15 @@ body {
 }
 
 .input-field:focus {
-  border-color: var(--color-accent);
+  border-color: var(--color-ucademy-accent);
   box-shadow: 0 0 0 3px rgba(255, 228, 94, 0.3);
 }
 
 .input-field::placeholder {
-  color: var(--color-text-secondary);
+  color: var(--color-ucademy-text-secondary);
 }
 
-/* Section spacing */
+/* Section container */
 .section-container {
   max-width: 1280px;
   margin: 0 auto;
