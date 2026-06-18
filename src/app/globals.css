@@ -4,12 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'perfektta';
-  src: url('/fonts/perfektta.woff2') format('woff2');
-  font-weight: 400 700;
-  font-display: swap;
-}
+/* perfektta font will use Besley as fallback (loaded via Google Fonts above) */
+/* Font weights: 400 (regular), 500 (medium), 600 (semibold), 700 (bold) via Tailwind */
 
 :root {
   --color-dark: #1A1A1A;

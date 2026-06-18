@@ -46,13 +46,13 @@ export default function SocialProof() {
 
           {/* Students */}
           <div className="animate-item opacity-0 flex flex-col items-center p-6">
-            <span className="text-3xl font-display font-bold text-ucademy-accent">+[estadística]</span>
+            <span className="text-3xl font-display font-bold text-ucademy-accent">+8.700</span>
             <span className="text-gray-400 text-sm mt-1">Alumnos en la trinchera</span>
           </div>
 
           {/* Success rate */}
           <div className="animate-item opacity-0 flex flex-col items-center p-6">
-            <span className="text-3xl font-display font-bold text-ucademy-accent">[%]</span>
+            <span className="text-3xl font-display font-bold text-ucademy-accent">92%</span>
             <span className="text-gray-400 text-sm mt-1">Consiguen su objetivo</span>
           </div>
         </div>

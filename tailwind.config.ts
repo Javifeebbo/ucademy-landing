@@ -20,7 +20,7 @@ export default {
         },
       },
       fontFamily: {
-        display: ["perfektta", "Besley", "Georgia", "serif"],
+        display: ["Besley", "Georgia", "serif"],
         body: ["Poppins", "system-ui", "sans-serif"],
         button: ["Besley", "Georgia", "serif"],
       },

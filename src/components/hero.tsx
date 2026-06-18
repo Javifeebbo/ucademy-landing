@@ -29,10 +29,15 @@ export default function Hero() {
       ref={sectionRef}
       className="relative min-h-screen flex items-center bg-ucademy-dark overflow-hidden"
     >
-      {/* Background gradient effect */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-ucademy-accent/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 left-1/3 w-64 h-64 bg-ucademy-accent/5 rounded-full blur-2xl" />
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/hero-bg.webp"
+          alt="Fondo abstracto Ucademy"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-ucademy-dark/40" />
       </div>
 
       <div className="section-container relative z-10 w-full py-32 md:py-40">

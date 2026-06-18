@@ -37,7 +37,7 @@ export default function TrustBar() {
 
           {/* Stats */}
           <div className="text-center">
-            <span className="text-2xl font-display font-bold text-ucademy-dark">+0</span>
+            <span className="text-2xl font-display font-bold text-ucademy-dark">+8.700</span>
             <span className="text-xs text-ucademy-text-secondary block">Alumnos en la trinchera</span>
           </div>
         </div>

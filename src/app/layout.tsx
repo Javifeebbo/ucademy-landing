@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     siteName: "Ucademy",
+    images: [{ url: "/images/og-ucademy.webp", width: 1200, height: 630 }],
   },
 };
 

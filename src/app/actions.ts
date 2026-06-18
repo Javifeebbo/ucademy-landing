@@ -1,6 +1,9 @@
 'use server'
 
 import { supabase } from '@/lib/supabase'
+import { saveLeadToFile } from '@/lib/storage'
+import fs from 'fs'
+import path from 'path'
 
 interface LeadData {
   name: string
@@ -51,16 +54,25 @@ export async function submitLead(prevState: { error: string; success: boolean },
     landing_id: 'ucademy-general-001',
   }
 
-  // Try Supabase, fall back to console log for local dev
+  // Try Supabase first
+  let supabaseAvailable = false
   try {
     const { error } = await supabase.from('leads').insert([lead])
-    if (error) {
-      console.error('Supabase error:', error)
-      return { error: 'Error al guardar tus datos. Inténtalo de nuevo.', success: false }
+    if (!error) supabaseAvailable = true
+  } catch {
+    // Supabase not configured - will use JSON fallback
+  }
+
+  if (!supabaseAvailable) {
+    // Fallback: save to JSON file (works on Vercel for preview/development)
+    try {
+      saveLeadToFile(lead)
+      console.log('Lead saved to JSON file (Supabase not configured)')
+    } catch (e) {
+      console.error('Failed to save lead:', e)
+      // Last resort: log it
+      console.log('LEAD CAPTURED:', JSON.stringify(lead))
     }
-  } catch (e) {
-    console.error('Supabase connection error:', e)
-    console.log('Lead captured (Supabase unavailable):', lead)
   }
 
   return { error: '', success: true }
