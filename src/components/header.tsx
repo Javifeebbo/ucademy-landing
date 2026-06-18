@@ -12,11 +12,6 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollTo = (id: string) => {
-    setMenuOpen(false)
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -24,46 +19,44 @@ export default function Header() {
       }`}
     >
       <div className="section-container flex items-center justify-between h-16 md:h-20">
-        {/* Logo */}
-        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        <a href="#hero"
           className={`font-display text-2xl font-bold transition-colors ${
             scrolled ? 'text-ucademy-dark' : 'text-white'
           }`}
         >
           Ucademy
-        </button>
+        </a>
 
-        {/* Desktop Nav */}
+        {/* Desktop Nav - native anchor links */}
         <nav className="hidden md:flex items-center gap-8">
-          <button onClick={() => scrollTo('divisions')}
+          <a href="#divisions"
             className={`text-sm font-medium transition-colors hover:text-ucademy-accent ${
               scrolled ? 'text-ucademy-dark' : 'text-gray-300'
             }`}
           >
             Oposiciones
-          </button>
-          <button onClick={() => scrollTo('divisions')}
+          </a>
+          <a href="#divisions"
             className={`text-sm font-medium transition-colors hover:text-ucademy-accent ${
               scrolled ? 'text-ucademy-dark' : 'text-gray-300'
             }`}
           >
             Universidad
-          </button>
-          <button onClick={() => scrollTo('divisions')}
+          </a>
+          <a href="#divisions"
             className={`text-sm font-medium transition-colors hover:text-ucademy-accent ${
               scrolled ? 'text-ucademy-dark' : 'text-gray-300'
             }`}
           >
             FP
-          </button>
-          <button onClick={() => scrollTo('form')}
+          </a>
+          <a href="#form"
             className="bg-ucademy-accent text-ucademy-dark font-button font-bold px-5 py-2.5 rounded-full text-sm hover:bg-ucademy-accent-hover transition-all hover:scale-105"
           >
             Solicitar información
-          </button>
+          </a>
         </nav>
 
-        {/* Mobile Hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className={`md:hidden p-2 transition-colors ${
@@ -81,18 +74,17 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-white border-b border-ucademy-border">
           <div className="section-container py-4 flex flex-col gap-3">
-            <button onClick={() => scrollTo('divisions')} className="text-left py-2 text-ucademy-dark font-medium">Oposiciones</button>
-            <button onClick={() => scrollTo('divisions')} className="text-left py-2 text-ucademy-dark font-medium">Universidad</button>
-            <button onClick={() => scrollTo('divisions')} className="text-left py-2 text-ucademy-dark font-medium">FP</button>
-            <button onClick={() => scrollTo('form')}
+            <a href="#divisions" onClick={() => setMenuOpen(false)} className="text-left py-2 text-ucademy-dark font-medium">Oposiciones</a>
+            <a href="#divisions" onClick={() => setMenuOpen(false)} className="text-left py-2 text-ucademy-dark font-medium">Universidad</a>
+            <a href="#divisions" onClick={() => setMenuOpen(false)} className="text-left py-2 text-ucademy-dark font-medium">FP</a>
+            <a href="#form" onClick={() => setMenuOpen(false)}
               className="bg-ucademy-accent text-ucademy-dark font-button font-bold px-5 py-3 rounded-full text-center mt-2"
             >
               Solicitar información
-            </button>
+            </a>
           </div>
         </div>
       )}

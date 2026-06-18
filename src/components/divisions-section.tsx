@@ -87,15 +87,14 @@ export default function DivisionsSection() {
                 <p className="text-ucademy-text-secondary text-sm md:text-base leading-relaxed mb-6">
                   {div.description}
                 </p>
-                <button
-                  onClick={() => document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' })}
+                <a href="#form"
                   className="font-button font-bold text-ucademy-dark text-sm hover:text-ucademy-accent transition-colors inline-flex items-center gap-1"
                 >
                   Saber más
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
-                </button>
+                </a>
               </article>
             )
           })}

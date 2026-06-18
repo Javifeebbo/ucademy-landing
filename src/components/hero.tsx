@@ -1,64 +1,28 @@
-'use client'
-
-import { useEffect, useRef } from 'react'
-
 export default function Hero() {
-  const sectionRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const el = sectionRef.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.querySelectorAll('.animate-trigger').forEach((child, i) => {
-            setTimeout(() => child.classList.add('visible'), i * 150)
-          })
-          observer.unobserve(el)
-        }
-      },
-      { threshold: 0.1 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <section
-      id="hero"
-      ref={sectionRef}
-      className="relative min-h-screen flex items-center bg-ucademy-dark overflow-hidden"
-    >
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src="/images/hero-bg.webp"
-          alt="Fondo abstracto Ucademy"
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-ucademy-dark/40" />
+    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-ucademy-dark via-[#2A2A2A] to-ucademy-dark overflow-hidden">
+      {/* Subtle decorative elements */}
+      <div className="absolute top-0 right-0 w-1/3 h-full opacity-[0.03]">
+        <div className="w-full h-full" style={{
+          backgroundImage: 'radial-gradient(circle at 30% 50%, #FFE45E 0%, transparent 70%)'
+        }} />
       </div>
 
-      <div className="section-container relative z-10 w-full py-32 md:py-40">
+      <div className="section-container relative z-10 w-full py-24 md:py-32">
         <div className="max-w-4xl">
-          {/* Pretitle */}
-          <p className="animate-trigger opacity-0 font-sans text-ucademy-accent text-sm md:text-base font-semibold tracking-widest uppercase mb-4">
+          <p className="font-sans text-ucademy-accent text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-4">
             Educación salvaje para la vida real
           </p>
 
-          {/* H1 */}
-          <h1 className="animate-trigger opacity-0 font-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-bold mb-6">
+          <h1 className="font-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-bold mb-6">
             La academia online para conquistar el futuro que te pertenece
           </h1>
 
-          {/* Subheadline */}
-          <p className="animate-trigger opacity-0 font-sans text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-8">
+          <p className="font-sans text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl mb-8">
             Oposiciones, universidad o FP. Una ruta clara, un método que funciona. Sin humo, sin laberintos y sin perder un día más.
           </p>
 
-          {/* Bullets */}
-          <ul className="animate-trigger opacity-0 space-y-3 mb-10">
+          <ul className="space-y-3 mb-10">
             {[
               'Plan personalizado que se adapta a tu vida real',
               'Tutores en activo: dudas resueltas el mismo día',
@@ -76,21 +40,18 @@ export default function Hero() {
             ))}
           </ul>
 
-          {/* CTA */}
-          <div className="animate-trigger opacity-0 flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
-            <button
-              onClick={() => document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' })}
-              className="btn-primary text-lg px-8 py-4"
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+            <a href="#form"
+              className="inline-flex items-center justify-center gap-2 bg-ucademy-accent text-ucademy-dark font-bold rounded-full px-8 py-4 text-lg hover:bg-ucademy-accent-hover transition-all hover:scale-105"
             >
               Trazar mi ruta
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </button>
+            </a>
           </div>
 
-          {/* Trust micro */}
-          <p className="animate-trigger opacity-0 text-gray-500 text-xs md:text-sm max-w-xl">
+          <p className="text-gray-500 text-xs md:text-sm max-w-xl">
             Centro Oficial autorizado por el Ministerio de Educación, Formación Profesional y Deportes. Códigos de Centro: 28082939 y 28081728
           </p>
         </div>

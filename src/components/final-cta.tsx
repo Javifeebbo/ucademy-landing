@@ -10,15 +10,14 @@ export default function FinalCTA() {
         <p className="font-sans text-gray-300 text-lg md:text-xl mb-8 max-w-xl mx-auto">
           Cada día que pasa es un día más cerca de la convocatoria. Empieza hoy.
         </p>
-        <button
-          onClick={() => document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' })}
-          className="btn-primary text-lg px-10 py-4"
+        <a href="#form"
+          className="btn-primary text-lg px-10 py-4 inline-flex"
         >
           Empieza tu ruta hoy
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-        </button>
+        </a>
       </div>
     </section>
   )
